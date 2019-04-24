@@ -1,0 +1,1033 @@
+
+# 1 "D:\MCUProject\ZH-TYNB-V1.0\src\pwm.c"
+
+# 2 "D:\Program Files (x86)\Microchip\xc8\v1.30\include\stddef.h"
+typedef int ptrdiff_t;
+typedef unsigned size_t;
+typedef unsigned short wchar_t;
+
+# 13
+extern int errno;
+
+# 65 "D:\Program Files (x86)\Microchip\xc8\v1.30\include\GenericTypeDefs.h"
+typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
+
+
+typedef enum _BIT { CLEAR = 0, SET } BIT;
+
+# 75
+typedef signed int INT;
+typedef signed char INT8;
+typedef signed short int INT16;
+typedef signed long int INT32;
+
+
+
+ typedef signed long long INT64;
+
+
+
+typedef unsigned int UINT;
+typedef unsigned char UINT8;
+typedef unsigned short int UINT16;
+
+# 93
+typedef unsigned long int UINT32;
+
+
+ typedef unsigned long long UINT64;
+
+
+typedef union
+{
+UINT8 Val;
+struct
+{
+ UINT8 b0:1;
+ UINT8 b1:1;
+ UINT8 b2:1;
+ UINT8 b3:1;
+ UINT8 b4:1;
+ UINT8 b5:1;
+ UINT8 b6:1;
+ UINT8 b7:1;
+} bits;
+} UINT8_VAL, UINT8_BITS;
+
+typedef union
+{
+UINT16 Val;
+UINT8 v[2] ;
+struct 
+{
+UINT8 LB;
+UINT8 HB;
+} byte;
+struct 
+{
+ UINT8 b0:1;
+ UINT8 b1:1;
+ UINT8 b2:1;
+ UINT8 b3:1;
+ UINT8 b4:1;
+ UINT8 b5:1;
+ UINT8 b6:1;
+ UINT8 b7:1;
+ UINT8 b8:1;
+ UINT8 b9:1;
+ UINT8 b10:1;
+ UINT8 b11:1;
+ UINT8 b12:1;
+ UINT8 b13:1;
+ UINT8 b14:1;
+ UINT8 b15:1;
+} bits;
+} UINT16_VAL, UINT16_BITS;
+
+# 187
+typedef union
+{
+UINT32 Val;
+UINT16 w[2] ;
+UINT8 v[4] ;
+struct 
+{
+UINT16 LW;
+UINT16 HW;
+} word;
+struct 
+{
+UINT8 LB;
+UINT8 HB;
+UINT8 UB;
+UINT8 MB;
+} byte;
+struct 
+{
+UINT16_VAL low;
+UINT16_VAL high;
+}wordUnion;
+struct 
+{
+ UINT8 b0:1;
+ UINT8 b1:1;
+ UINT8 b2:1;
+ UINT8 b3:1;
+ UINT8 b4:1;
+ UINT8 b5:1;
+ UINT8 b6:1;
+ UINT8 b7:1;
+ UINT8 b8:1;
+ UINT8 b9:1;
+ UINT8 b10:1;
+ UINT8 b11:1;
+ UINT8 b12:1;
+ UINT8 b13:1;
+ UINT8 b14:1;
+ UINT8 b15:1;
+ UINT8 b16:1;
+ UINT8 b17:1;
+ UINT8 b18:1;
+ UINT8 b19:1;
+ UINT8 b20:1;
+ UINT8 b21:1;
+ UINT8 b22:1;
+ UINT8 b23:1;
+ UINT8 b24:1;
+ UINT8 b25:1;
+ UINT8 b26:1;
+ UINT8 b27:1;
+ UINT8 b28:1;
+ UINT8 b29:1;
+ UINT8 b30:1;
+ UINT8 b31:1;
+} bits;
+} UINT32_VAL;
+
+
+
+typedef union
+{
+UINT64 Val;
+UINT32 d[2] ;
+UINT16 w[4] ;
+UINT8 v[8] ;
+struct 
+{
+UINT32 LD;
+UINT32 HD;
+} dword;
+struct 
+{
+UINT16 LW;
+UINT16 HW;
+UINT16 UW;
+UINT16 MW;
+} word;
+struct 
+{
+ UINT8 b0:1;
+ UINT8 b1:1;
+ UINT8 b2:1;
+ UINT8 b3:1;
+ UINT8 b4:1;
+ UINT8 b5:1;
+ UINT8 b6:1;
+ UINT8 b7:1;
+ UINT8 b8:1;
+ UINT8 b9:1;
+ UINT8 b10:1;
+ UINT8 b11:1;
+ UINT8 b12:1;
+ UINT8 b13:1;
+ UINT8 b14:1;
+ UINT8 b15:1;
+ UINT8 b16:1;
+ UINT8 b17:1;
+ UINT8 b18:1;
+ UINT8 b19:1;
+ UINT8 b20:1;
+ UINT8 b21:1;
+ UINT8 b22:1;
+ UINT8 b23:1;
+ UINT8 b24:1;
+ UINT8 b25:1;
+ UINT8 b26:1;
+ UINT8 b27:1;
+ UINT8 b28:1;
+ UINT8 b29:1;
+ UINT8 b30:1;
+ UINT8 b31:1;
+ UINT8 b32:1;
+ UINT8 b33:1;
+ UINT8 b34:1;
+ UINT8 b35:1;
+ UINT8 b36:1;
+ UINT8 b37:1;
+ UINT8 b38:1;
+ UINT8 b39:1;
+ UINT8 b40:1;
+ UINT8 b41:1;
+ UINT8 b42:1;
+ UINT8 b43:1;
+ UINT8 b44:1;
+ UINT8 b45:1;
+ UINT8 b46:1;
+ UINT8 b47:1;
+ UINT8 b48:1;
+ UINT8 b49:1;
+ UINT8 b50:1;
+ UINT8 b51:1;
+ UINT8 b52:1;
+ UINT8 b53:1;
+ UINT8 b54:1;
+ UINT8 b55:1;
+ UINT8 b56:1;
+ UINT8 b57:1;
+ UINT8 b58:1;
+ UINT8 b59:1;
+ UINT8 b60:1;
+ UINT8 b61:1;
+ UINT8 b62:1;
+ UINT8 b63:1;
+} bits;
+} UINT64_VAL;
+
+# 339
+typedef void VOID;
+
+typedef char CHAR8;
+typedef unsigned char UCHAR8;
+
+typedef unsigned char BYTE;
+typedef unsigned short int WORD;
+typedef unsigned long DWORD;
+
+
+typedef unsigned long long QWORD;
+typedef signed char CHAR;
+typedef signed short int SHORT;
+typedef signed long LONG;
+
+
+typedef signed long long LONGLONG;
+typedef union
+{
+BYTE Val;
+struct 
+{
+ BYTE b0:1;
+ BYTE b1:1;
+ BYTE b2:1;
+ BYTE b3:1;
+ BYTE b4:1;
+ BYTE b5:1;
+ BYTE b6:1;
+ BYTE b7:1;
+} bits;
+} BYTE_VAL, BYTE_BITS;
+
+typedef union
+{
+WORD Val;
+BYTE v[2] ;
+struct 
+{
+BYTE LB;
+BYTE HB;
+} byte;
+struct 
+{
+ BYTE b0:1;
+ BYTE b1:1;
+ BYTE b2:1;
+ BYTE b3:1;
+ BYTE b4:1;
+ BYTE b5:1;
+ BYTE b6:1;
+ BYTE b7:1;
+ BYTE b8:1;
+ BYTE b9:1;
+ BYTE b10:1;
+ BYTE b11:1;
+ BYTE b12:1;
+ BYTE b13:1;
+ BYTE b14:1;
+ BYTE b15:1;
+} bits;
+} WORD_VAL, WORD_BITS;
+
+typedef union
+{
+DWORD Val;
+WORD w[2] ;
+BYTE v[4] ;
+struct 
+{
+WORD LW;
+WORD HW;
+} word;
+struct 
+{
+BYTE LB;
+BYTE HB;
+BYTE UB;
+BYTE MB;
+} byte;
+struct 
+{
+WORD_VAL low;
+WORD_VAL high;
+}wordUnion;
+struct 
+{
+ BYTE b0:1;
+ BYTE b1:1;
+ BYTE b2:1;
+ BYTE b3:1;
+ BYTE b4:1;
+ BYTE b5:1;
+ BYTE b6:1;
+ BYTE b7:1;
+ BYTE b8:1;
+ BYTE b9:1;
+ BYTE b10:1;
+ BYTE b11:1;
+ BYTE b12:1;
+ BYTE b13:1;
+ BYTE b14:1;
+ BYTE b15:1;
+ BYTE b16:1;
+ BYTE b17:1;
+ BYTE b18:1;
+ BYTE b19:1;
+ BYTE b20:1;
+ BYTE b21:1;
+ BYTE b22:1;
+ BYTE b23:1;
+ BYTE b24:1;
+ BYTE b25:1;
+ BYTE b26:1;
+ BYTE b27:1;
+ BYTE b28:1;
+ BYTE b29:1;
+ BYTE b30:1;
+ BYTE b31:1;
+} bits;
+} DWORD_VAL;
+
+
+typedef union
+{
+QWORD Val;
+DWORD d[2] ;
+WORD w[4] ;
+BYTE v[8] ;
+struct 
+{
+DWORD LD;
+DWORD HD;
+} dword;
+struct 
+{
+WORD LW;
+WORD HW;
+WORD UW;
+WORD MW;
+} word;
+struct 
+{
+ BYTE b0:1;
+ BYTE b1:1;
+ BYTE b2:1;
+ BYTE b3:1;
+ BYTE b4:1;
+ BYTE b5:1;
+ BYTE b6:1;
+ BYTE b7:1;
+ BYTE b8:1;
+ BYTE b9:1;
+ BYTE b10:1;
+ BYTE b11:1;
+ BYTE b12:1;
+ BYTE b13:1;
+ BYTE b14:1;
+ BYTE b15:1;
+ BYTE b16:1;
+ BYTE b17:1;
+ BYTE b18:1;
+ BYTE b19:1;
+ BYTE b20:1;
+ BYTE b21:1;
+ BYTE b22:1;
+ BYTE b23:1;
+ BYTE b24:1;
+ BYTE b25:1;
+ BYTE b26:1;
+ BYTE b27:1;
+ BYTE b28:1;
+ BYTE b29:1;
+ BYTE b30:1;
+ BYTE b31:1;
+ BYTE b32:1;
+ BYTE b33:1;
+ BYTE b34:1;
+ BYTE b35:1;
+ BYTE b36:1;
+ BYTE b37:1;
+ BYTE b38:1;
+ BYTE b39:1;
+ BYTE b40:1;
+ BYTE b41:1;
+ BYTE b42:1;
+ BYTE b43:1;
+ BYTE b44:1;
+ BYTE b45:1;
+ BYTE b46:1;
+ BYTE b47:1;
+ BYTE b48:1;
+ BYTE b49:1;
+ BYTE b50:1;
+ BYTE b51:1;
+ BYTE b52:1;
+ BYTE b53:1;
+ BYTE b54:1;
+ BYTE b55:1;
+ BYTE b56:1;
+ BYTE b57:1;
+ BYTE b58:1;
+ BYTE b59:1;
+ BYTE b60:1;
+ BYTE b61:1;
+ BYTE b62:1;
+ BYTE b63:1;
+} bits;
+} QWORD_VAL;
+
+# 17 "D:\MCUProject\ZH-TYNB-V1.0\include\delay.h"
+extern void delay_1us(void);
+
+extern void delay_ms(WORD count);
+
+# 12 "D:\MCUProject\ZH-TYNB-V1.0\include\interrupt.h"
+extern void init_interrupt(void);
+
+
+
+extern unsigned char open_discharge_time;
+extern unsigned int ms_cnt;
+extern unsigned int se_cnt;
+extern unsigned int mi_cnt;
+extern unsigned int ho_cnt;
+
+extern unsigned char open_an0_time;
+extern unsigned int an0_time_count;
+extern unsigned char handle_an0_process_flag;
+
+
+extern unsigned char open_an1_time;
+extern unsigned int an1_time_count;
+extern unsigned char handle_an1_process_flag;
+
+
+extern unsigned char open_an2_time;
+extern unsigned int an2_time_count;
+extern unsigned char handle_an2_process_flag;
+
+
+extern unsigned char open_an3_time;
+extern unsigned int an3_time_count;
+extern unsigned char handle_an3_process_flag;
+
+
+extern unsigned char open_an4_time;
+extern unsigned int an4_time_count;
+extern unsigned char handle_an4_process_flag;
+
+
+extern unsigned char open_an9_time;
+extern unsigned int an9_time_count;
+extern unsigned char handle_an9_process_flag;
+
+
+extern unsigned char open_an10_time;
+extern unsigned int an10_time_count;
+extern unsigned char handle_an10_process_flag;
+
+
+extern unsigned char handle_short_flag;
+
+# 43 "D:\MCUProject\ZH-TYNB-V1.0\include\led.h"
+extern void init_led(void);
+
+# 15 "D:\MCUProject\ZH-TYNB-V1.0\include\timer.h"
+extern void init_timer1(void);
+
+# 24 "D:\MCUProject\ZH-TYNB-V1.0\include\uart.h"
+extern void init_uart1(void);
+
+extern void uart1_send_byte(BYTE data);
+
+extern void uart1_send_nbyte(BYTE *data,DWORD size);
+
+extern BYTE uart1_read_byte(void);
+
+extern void uart1_read_nbyte(BYTE *buffer,BYTE length);
+
+extern bit handle_even_check(unsigned char databyte);
+
+extern void handle_uart_rx_buf(void);
+
+# 44
+extern unsigned char uart1_rx_buf[80];
+
+extern unsigned char uart1_tx_buf[80];
+
+
+
+
+extern unsigned char uart1_time_count;
+
+extern unsigned char uart1_receive_byte_count;
+
+extern BOOL uart1_receive_flag;
+
+extern unsigned char uart1_rx_control_flag;
+
+
+extern unsigned char uart_send_delay_timer;
+extern unsigned char uart_send_end_flag;
+extern unsigned char uart_send_byte_count;
+extern unsigned char*uart_send_point;
+
+extern unsigned char rx_frame_kind;
+extern unsigned char tx_frame_kind;
+
+# 57 "D:\MCUProject\ZH-TYNB-V1.0\include\adc.h"
+extern unsigned int mcu_value;
+
+extern unsigned int temperature_value;
+
+extern unsigned int pv_voltage_value;
+
+extern unsigned int battery_voltage_value;
+
+extern unsigned int load_voltage_value;
+
+extern unsigned int charge_current_value;
+
+extern unsigned int discharge_current_value;
+
+
+extern unsigned int adc_buffer[64];
+
+# 79
+extern void init_adc(void);
+
+# 29 "D:\MCUProject\ZH-TYNB-V1.0\include\pwm.h"
+extern unsigned int pwm_duty_value;
+
+extern unsigned int bost_pwm_value;
+
+extern unsigned int buck_pwm_value;
+
+
+extern long int P_prev;
+
+extern long int P_last;
+
+# 44
+extern void init_pwm(void);
+
+extern void Enable_Buck_Pwm(void);
+
+extern void Disable_Buck_Pwm(void);
+
+extern void Set_Buck_Pwm_Duty(unsigned int duty);
+
+extern void Enable_Bost_Pwm(void);
+
+extern void Disable_Bost_Pwm(void);
+
+extern void Set_Bost_Pwm_Duty(unsigned int dduty);
+
+# 37 "D:\MCUProject\ZH-TYNB-V1.0\include\task.h"
+extern unsigned char buf[50];
+
+extern unsigned char system_status;
+
+extern unsigned char system_check_time;
+
+extern unsigned int system_time_count;
+
+extern unsigned char work_mode;
+
+extern unsigned char pv_voltage_status;
+
+extern unsigned char battery_voltage_status;
+
+extern unsigned char load_voltage_status;
+
+extern unsigned char discharge_index;
+
+extern unsigned char charge_index;
+
+extern unsigned char nop_index;
+
+extern unsigned int involid_time_count;
+
+extern unsigned int cv_level_time_count;
+
+extern unsigned int load_short_time_count;
+
+extern unsigned int load_open_time_count;
+
+extern unsigned int over_load_time_count;
+
+extern unsigned int battery_low_time_count;
+
+
+
+
+extern unsigned long int night_time_count;
+
+extern unsigned long int day_time_count;
+
+extern unsigned long int pv_time_count;
+
+extern unsigned long int light_time_level;
+
+extern unsigned int pv_prev;
+
+extern unsigned int I_prev;
+
+
+extern float PWM;
+
+extern float PWM_I;
+
+extern float bt_prev;
+
+extern unsigned char mppt_status;
+
+extern unsigned int mppt_time_count;
+
+extern unsigned char temper_time_count;
+
+extern unsigned char over_temper_time_count;
+
+extern unsigned char sys_temper_flag;
+
+
+
+extern unsigned char charge_led_status;
+
+extern unsigned char bt_led_status;
+
+extern unsigned char discharge_led_status;
+
+extern unsigned char bt_time_count;
+
+extern unsigned char pv_index;
+
+extern unsigned char Adjust_Pout_Flag;
+
+extern unsigned char limit_power_pid_flag;
+
+
+
+extern unsigned char mcu_t00_time_count;
+extern unsigned char mcu_t01_time_count;
+extern unsigned char mcu_t02_time_count;
+extern unsigned char mcu_t03_time_count;
+extern unsigned char mcu_temp_index;
+
+extern unsigned char pid_index;
+
+
+
+extern void handle_ad_loop(void);
+
+extern void handle_task_process(void);
+
+extern unsigned int start_ad_convert(unsigned char ch);
+
+extern void Mppt_Charge(void);
+
+extern void CC_CV_Charge(void);
+
+# 14 "D:\MCUProject\ZH-TYNB-V1.0\include\PID.h"
+typedef struct PID_VAR{
+
+float SetPoint;
+float Proportion;
+float Integral;
+float Derivative;
+float LastError;
+float PrevError;
+float SumError;
+} PID;
+
+
+
+
+extern PID PID_CC_charge;
+
+extern PID PID_CV_charge;
+
+extern PID PID_CC_discharge;
+
+extern void pid_init (PID *pp);
+
+extern float pid_calc( PID *pp, int NowPoint );
+
+# 21 "D:\MCUProject\ZH-TYNB-V1.0\include\Modbus.h"
+extern unsigned int crc_data;
+
+
+
+
+extern unsigned int crc16(volatile unsigned char *puchMsg, unsigned char usDataLen);
+
+# 6 "D:\MCUProject\ZH-TYNB-V1.0\include\ird_remote.h"
+extern float charge_r_value;
+
+extern float discharge_r_value;
+
+
+extern float p_v;
+
+extern float b_v;
+
+extern float load_v;
+
+extern float charge_I ;
+
+extern float load_I ;
+
+extern unsigned char sys_mode;
+
+extern unsigned char today_index;
+
+extern float bt_00_hv;
+extern float bt_00_lv;
+
+extern float bt_01_hv;
+extern float bt_01_lv;
+
+extern float bt_02_hv;
+extern float bt_02_lv;
+
+extern float bt_03_hv;
+extern float bt_03_lv;
+
+extern float bt_04_hv;
+extern float bt_04_lv;
+
+extern float bt_05_hv;
+extern float bt_05_lv;
+
+extern float bt_06_hv;
+extern float bt_06_lv;
+
+extern float bt_07_hv;
+extern float bt_07_lv;
+
+
+
+extern float light_pv;
+
+extern float load_cc_I;
+
+extern float load_percent;
+
+extern float step_01_load_percent;
+
+extern float step_02_load_percent;
+
+extern float step_03_load_percent;
+
+extern float step_04_load_percent;
+
+extern float step_05_load_percent;
+
+extern unsigned int step_01_time_limit;
+
+extern unsigned int step_02_time_limit;
+
+extern unsigned int step_03_time_limit;
+
+extern unsigned int step_04_time_limit;
+
+extern unsigned int step_05_time_limit;
+
+extern unsigned char volt_id;
+
+extern unsigned char bt_id;
+
+extern unsigned int light_time;
+
+extern float bt_volt_100 ;
+
+extern float bt_volt_80 ;
+
+extern float bt_volt_60 ;
+
+extern float bt_volt_40 ;
+
+extern float bt_volt_20 ;
+
+extern float bt_volt_00 ;
+
+
+extern float dianchi_guoya_baohu;
+
+extern float dianchi_guoya_huifu;
+
+extern float dianchi_qianya_baohu;
+
+extern float dianchi_qianya_huifu;
+
+extern float dianchi_diya_level;
+
+extern float dianchi_cv_level;
+
+extern float charge_i_limit;
+
+extern float shuchu_shortout_voltage;
+
+extern float shuchu_open_voltage;
+
+extern float discharge_i_baohu;
+
+extern float discharge_i_limit;
+
+extern float light_on_pv_level;
+
+extern float light_off_pv_level;
+
+
+float Load_Pmax;
+
+# 132
+extern void auto_system(void);
+
+extern void read_param_eeprom(void);
+
+# 11 "D:\MCUProject\ZH-TYNB-V1.0\src\pwm.c"
+unsigned int pwm_duty_value=0x0000;
+
+unsigned int bost_pwm_value=0x00;
+
+unsigned int buck_pwm_value=0x00;
+
+
+long int P_prev=0;
+long int P_last=0;
+
+# 30
+void init_pwm(void)
+{
+
+TRISCbits.TRISC2=1;
+
+TRISBbits.TRISB2=1;
+
+TRISBbits.TRISB5 =1;
+
+APFCONbits.CCP3SEL=1;
+
+# 45
+PR6=0xFF;
+
+CCP1CONbits.CCP1M=0b1100;
+
+CCP1CONbits.P1M=0b10;
+
+CCPTMRS0bits.C1TSEL=0b10;
+
+CCPR1L=0x00;
+
+CCP1CONbits.DC1B=0b00;
+
+TMR6IF=0;
+
+T6CONbits.T6OUTPS=0b0000;
+
+TMR6ON=0;
+
+T6CONbits.T6CKPS=0b00;
+
+# 69
+PR4=0x9F;
+
+CCP3CONbits.CCP3M=0b1100;
+
+CCP3CONbits.P3M=0b00;
+
+CCPTMRS0bits.C3TSEL=0b01;
+
+CCPR3L=0x00;
+
+CCP3CONbits.DC3B=0b00;
+
+TMR4IF=0;
+
+T4CONbits.T4OUTPS=0b0000;
+
+TMR4ON=0;
+
+T4CONbits.T4CKPS=0b00;
+
+
+
+TRISAbits.TRISA4=0;
+
+PR2=0xCE;
+
+CCP5CONbits.CCP5M=0b1100;
+
+CCP5CONbits.P5M=0b00;
+
+CCPTMRS1bits.C5TSEL=0b00;
+
+CCPR5L=(unsigned char)(0x114>>2);
+
+CCP5CONbits.DC5B=(unsigned char)(0x114&0b11);
+
+TMR2IF=0;
+
+T2CONbits.T2OUTPS=0b0000;
+
+TMR2ON=0;
+
+T2CONbits.T2CKPS=0b00;
+
+}
+
+# 123
+void Enable_Buck_Pwm(void)
+{
+TRISCbits.TRISC2=0;
+
+
+
+TMR6ON=1;
+
+}
+
+# 141
+void Disable_Buck_Pwm(void)
+{
+TRISCbits.TRISC2=1;
+
+TRISBbits.TRISB2=1;
+
+TMR6ON=0;
+
+}
+
+# 159
+void Set_Buck_Pwm_Duty(unsigned int duty)
+{
+buck_pwm_value=duty;
+
+if(duty<=900)
+{
+CCPR1L=(unsigned char)(duty>>2);
+
+CCP1CONbits.DC1B=(unsigned char)(duty&0b11);
+}
+else
+{
+duty=900;
+
+CCPR1L=(unsigned char)(duty>>2);
+
+CCP1CONbits.DC1B=(unsigned char)(duty&0b11);
+}
+
+}
+
+# 188
+void Enable_Bost_Pwm(void)
+{
+TRISBbits.TRISB5 =0;
+
+
+TMR4ON=1;
+}
+
+# 204
+void Disable_Bost_Pwm(void)
+{
+TRISBbits.TRISB5 =1;
+
+# 212
+TMR4ON=0;
+
+}
+
+# 223
+void Set_Bost_Pwm_Duty(unsigned int dduty)
+{
+
+bost_pwm_value=dduty;
+
+if(dduty<=488)
+{
+CCPR3L=(unsigned char)(dduty>>2);
+
+CCP3CONbits.DC3B=(unsigned char)(dduty&0b11);
+}
+else
+{
+dduty=488;
+
+CCPR3L=(unsigned char)(dduty>>2);
+
+CCP3CONbits.DC3B=(unsigned char)(dduty&0b11);
+}
+
+}
+

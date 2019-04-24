@@ -1,0 +1,1300 @@
+Version 3.2 HI-TECH Software Intermediate Code
+"123 D:\MCUProject\ZH-TYNB-V1.0\include\ird_remote.h
+[v _Load_Pmax `f  1 e ]
+"7 D:\MCUProject\ZH-TYNB-V1.0\src\Modbus.c
+[v _crc_data `ui  1 e ]
+"10 D:\MCUProject\ZH-TYNB-V1.0\src\Modbus.c
+[v _CRCHi `Cuc  -> 0 `x e ]
+"40 D:\MCUProject\ZH-TYNB-V1.0\src\Modbus.c
+[v _CRCLo `Cuc  -> 0 `x e ]
+[; ;stddef.h: 2: typedef int ptrdiff_t;
+[; ;stddef.h: 3: typedef unsigned size_t;
+[; ;stddef.h: 4: typedef unsigned short wchar_t;
+[; ;stddef.h: 13: extern int errno;
+[; ;GenericTypeDefs.h: 65: typedef enum _BOOL { FALSE = 0, TRUE } BOOL;
+[; ;GenericTypeDefs.h: 68: typedef enum _BIT { CLEAR = 0, SET } BIT;
+[; ;GenericTypeDefs.h: 75: typedef signed int INT;
+[; ;GenericTypeDefs.h: 76: typedef signed char INT8;
+[; ;GenericTypeDefs.h: 77: typedef signed short int INT16;
+[; ;GenericTypeDefs.h: 78: typedef signed long int INT32;
+[; ;GenericTypeDefs.h: 82: typedef signed long long INT64;
+[; ;GenericTypeDefs.h: 86: typedef unsigned int UINT;
+[; ;GenericTypeDefs.h: 87: typedef unsigned char UINT8;
+[; ;GenericTypeDefs.h: 88: typedef unsigned short int UINT16;
+[; ;GenericTypeDefs.h: 93: typedef unsigned long int UINT32;
+[; ;GenericTypeDefs.h: 96: typedef unsigned long long UINT64;
+[; ;GenericTypeDefs.h: 99: typedef union
+[; ;GenericTypeDefs.h: 100: {
+[; ;GenericTypeDefs.h: 101: UINT8 Val;
+[; ;GenericTypeDefs.h: 102: struct
+[; ;GenericTypeDefs.h: 103: {
+[; ;GenericTypeDefs.h: 104: UINT8 b0:1;
+[; ;GenericTypeDefs.h: 105: UINT8 b1:1;
+[; ;GenericTypeDefs.h: 106: UINT8 b2:1;
+[; ;GenericTypeDefs.h: 107: UINT8 b3:1;
+[; ;GenericTypeDefs.h: 108: UINT8 b4:1;
+[; ;GenericTypeDefs.h: 109: UINT8 b5:1;
+[; ;GenericTypeDefs.h: 110: UINT8 b6:1;
+[; ;GenericTypeDefs.h: 111: UINT8 b7:1;
+[; ;GenericTypeDefs.h: 112: } bits;
+[; ;GenericTypeDefs.h: 113: } UINT8_VAL, UINT8_BITS;
+[; ;GenericTypeDefs.h: 115: typedef union
+[; ;GenericTypeDefs.h: 116: {
+[; ;GenericTypeDefs.h: 117: UINT16 Val;
+[; ;GenericTypeDefs.h: 118: UINT8 v[2] ;
+[; ;GenericTypeDefs.h: 119: struct 
+[; ;GenericTypeDefs.h: 120: {
+[; ;GenericTypeDefs.h: 121: UINT8 LB;
+[; ;GenericTypeDefs.h: 122: UINT8 HB;
+[; ;GenericTypeDefs.h: 123: } byte;
+[; ;GenericTypeDefs.h: 124: struct 
+[; ;GenericTypeDefs.h: 125: {
+[; ;GenericTypeDefs.h: 126: UINT8 b0:1;
+[; ;GenericTypeDefs.h: 127: UINT8 b1:1;
+[; ;GenericTypeDefs.h: 128: UINT8 b2:1;
+[; ;GenericTypeDefs.h: 129: UINT8 b3:1;
+[; ;GenericTypeDefs.h: 130: UINT8 b4:1;
+[; ;GenericTypeDefs.h: 131: UINT8 b5:1;
+[; ;GenericTypeDefs.h: 132: UINT8 b6:1;
+[; ;GenericTypeDefs.h: 133: UINT8 b7:1;
+[; ;GenericTypeDefs.h: 134: UINT8 b8:1;
+[; ;GenericTypeDefs.h: 135: UINT8 b9:1;
+[; ;GenericTypeDefs.h: 136: UINT8 b10:1;
+[; ;GenericTypeDefs.h: 137: UINT8 b11:1;
+[; ;GenericTypeDefs.h: 138: UINT8 b12:1;
+[; ;GenericTypeDefs.h: 139: UINT8 b13:1;
+[; ;GenericTypeDefs.h: 140: UINT8 b14:1;
+[; ;GenericTypeDefs.h: 141: UINT8 b15:1;
+[; ;GenericTypeDefs.h: 142: } bits;
+[; ;GenericTypeDefs.h: 143: } UINT16_VAL, UINT16_BITS;
+[; ;GenericTypeDefs.h: 187: typedef union
+[; ;GenericTypeDefs.h: 188: {
+[; ;GenericTypeDefs.h: 189: UINT32 Val;
+[; ;GenericTypeDefs.h: 190: UINT16 w[2] ;
+[; ;GenericTypeDefs.h: 191: UINT8 v[4] ;
+[; ;GenericTypeDefs.h: 192: struct 
+[; ;GenericTypeDefs.h: 193: {
+[; ;GenericTypeDefs.h: 194: UINT16 LW;
+[; ;GenericTypeDefs.h: 195: UINT16 HW;
+[; ;GenericTypeDefs.h: 196: } word;
+[; ;GenericTypeDefs.h: 197: struct 
+[; ;GenericTypeDefs.h: 198: {
+[; ;GenericTypeDefs.h: 199: UINT8 LB;
+[; ;GenericTypeDefs.h: 200: UINT8 HB;
+[; ;GenericTypeDefs.h: 201: UINT8 UB;
+[; ;GenericTypeDefs.h: 202: UINT8 MB;
+[; ;GenericTypeDefs.h: 203: } byte;
+[; ;GenericTypeDefs.h: 204: struct 
+[; ;GenericTypeDefs.h: 205: {
+[; ;GenericTypeDefs.h: 206: UINT16_VAL low;
+[; ;GenericTypeDefs.h: 207: UINT16_VAL high;
+[; ;GenericTypeDefs.h: 208: }wordUnion;
+[; ;GenericTypeDefs.h: 209: struct 
+[; ;GenericTypeDefs.h: 210: {
+[; ;GenericTypeDefs.h: 211: UINT8 b0:1;
+[; ;GenericTypeDefs.h: 212: UINT8 b1:1;
+[; ;GenericTypeDefs.h: 213: UINT8 b2:1;
+[; ;GenericTypeDefs.h: 214: UINT8 b3:1;
+[; ;GenericTypeDefs.h: 215: UINT8 b4:1;
+[; ;GenericTypeDefs.h: 216: UINT8 b5:1;
+[; ;GenericTypeDefs.h: 217: UINT8 b6:1;
+[; ;GenericTypeDefs.h: 218: UINT8 b7:1;
+[; ;GenericTypeDefs.h: 219: UINT8 b8:1;
+[; ;GenericTypeDefs.h: 220: UINT8 b9:1;
+[; ;GenericTypeDefs.h: 221: UINT8 b10:1;
+[; ;GenericTypeDefs.h: 222: UINT8 b11:1;
+[; ;GenericTypeDefs.h: 223: UINT8 b12:1;
+[; ;GenericTypeDefs.h: 224: UINT8 b13:1;
+[; ;GenericTypeDefs.h: 225: UINT8 b14:1;
+[; ;GenericTypeDefs.h: 226: UINT8 b15:1;
+[; ;GenericTypeDefs.h: 227: UINT8 b16:1;
+[; ;GenericTypeDefs.h: 228: UINT8 b17:1;
+[; ;GenericTypeDefs.h: 229: UINT8 b18:1;
+[; ;GenericTypeDefs.h: 230: UINT8 b19:1;
+[; ;GenericTypeDefs.h: 231: UINT8 b20:1;
+[; ;GenericTypeDefs.h: 232: UINT8 b21:1;
+[; ;GenericTypeDefs.h: 233: UINT8 b22:1;
+[; ;GenericTypeDefs.h: 234: UINT8 b23:1;
+[; ;GenericTypeDefs.h: 235: UINT8 b24:1;
+[; ;GenericTypeDefs.h: 236: UINT8 b25:1;
+[; ;GenericTypeDefs.h: 237: UINT8 b26:1;
+[; ;GenericTypeDefs.h: 238: UINT8 b27:1;
+[; ;GenericTypeDefs.h: 239: UINT8 b28:1;
+[; ;GenericTypeDefs.h: 240: UINT8 b29:1;
+[; ;GenericTypeDefs.h: 241: UINT8 b30:1;
+[; ;GenericTypeDefs.h: 242: UINT8 b31:1;
+[; ;GenericTypeDefs.h: 243: } bits;
+[; ;GenericTypeDefs.h: 244: } UINT32_VAL;
+[; ;GenericTypeDefs.h: 248: typedef union
+[; ;GenericTypeDefs.h: 249: {
+[; ;GenericTypeDefs.h: 250: UINT64 Val;
+[; ;GenericTypeDefs.h: 251: UINT32 d[2] ;
+[; ;GenericTypeDefs.h: 252: UINT16 w[4] ;
+[; ;GenericTypeDefs.h: 253: UINT8 v[8] ;
+[; ;GenericTypeDefs.h: 254: struct 
+[; ;GenericTypeDefs.h: 255: {
+[; ;GenericTypeDefs.h: 256: UINT32 LD;
+[; ;GenericTypeDefs.h: 257: UINT32 HD;
+[; ;GenericTypeDefs.h: 258: } dword;
+[; ;GenericTypeDefs.h: 259: struct 
+[; ;GenericTypeDefs.h: 260: {
+[; ;GenericTypeDefs.h: 261: UINT16 LW;
+[; ;GenericTypeDefs.h: 262: UINT16 HW;
+[; ;GenericTypeDefs.h: 263: UINT16 UW;
+[; ;GenericTypeDefs.h: 264: UINT16 MW;
+[; ;GenericTypeDefs.h: 265: } word;
+[; ;GenericTypeDefs.h: 266: struct 
+[; ;GenericTypeDefs.h: 267: {
+[; ;GenericTypeDefs.h: 268: UINT8 b0:1;
+[; ;GenericTypeDefs.h: 269: UINT8 b1:1;
+[; ;GenericTypeDefs.h: 270: UINT8 b2:1;
+[; ;GenericTypeDefs.h: 271: UINT8 b3:1;
+[; ;GenericTypeDefs.h: 272: UINT8 b4:1;
+[; ;GenericTypeDefs.h: 273: UINT8 b5:1;
+[; ;GenericTypeDefs.h: 274: UINT8 b6:1;
+[; ;GenericTypeDefs.h: 275: UINT8 b7:1;
+[; ;GenericTypeDefs.h: 276: UINT8 b8:1;
+[; ;GenericTypeDefs.h: 277: UINT8 b9:1;
+[; ;GenericTypeDefs.h: 278: UINT8 b10:1;
+[; ;GenericTypeDefs.h: 279: UINT8 b11:1;
+[; ;GenericTypeDefs.h: 280: UINT8 b12:1;
+[; ;GenericTypeDefs.h: 281: UINT8 b13:1;
+[; ;GenericTypeDefs.h: 282: UINT8 b14:1;
+[; ;GenericTypeDefs.h: 283: UINT8 b15:1;
+[; ;GenericTypeDefs.h: 284: UINT8 b16:1;
+[; ;GenericTypeDefs.h: 285: UINT8 b17:1;
+[; ;GenericTypeDefs.h: 286: UINT8 b18:1;
+[; ;GenericTypeDefs.h: 287: UINT8 b19:1;
+[; ;GenericTypeDefs.h: 288: UINT8 b20:1;
+[; ;GenericTypeDefs.h: 289: UINT8 b21:1;
+[; ;GenericTypeDefs.h: 290: UINT8 b22:1;
+[; ;GenericTypeDefs.h: 291: UINT8 b23:1;
+[; ;GenericTypeDefs.h: 292: UINT8 b24:1;
+[; ;GenericTypeDefs.h: 293: UINT8 b25:1;
+[; ;GenericTypeDefs.h: 294: UINT8 b26:1;
+[; ;GenericTypeDefs.h: 295: UINT8 b27:1;
+[; ;GenericTypeDefs.h: 296: UINT8 b28:1;
+[; ;GenericTypeDefs.h: 297: UINT8 b29:1;
+[; ;GenericTypeDefs.h: 298: UINT8 b30:1;
+[; ;GenericTypeDefs.h: 299: UINT8 b31:1;
+[; ;GenericTypeDefs.h: 300: UINT8 b32:1;
+[; ;GenericTypeDefs.h: 301: UINT8 b33:1;
+[; ;GenericTypeDefs.h: 302: UINT8 b34:1;
+[; ;GenericTypeDefs.h: 303: UINT8 b35:1;
+[; ;GenericTypeDefs.h: 304: UINT8 b36:1;
+[; ;GenericTypeDefs.h: 305: UINT8 b37:1;
+[; ;GenericTypeDefs.h: 306: UINT8 b38:1;
+[; ;GenericTypeDefs.h: 307: UINT8 b39:1;
+[; ;GenericTypeDefs.h: 308: UINT8 b40:1;
+[; ;GenericTypeDefs.h: 309: UINT8 b41:1;
+[; ;GenericTypeDefs.h: 310: UINT8 b42:1;
+[; ;GenericTypeDefs.h: 311: UINT8 b43:1;
+[; ;GenericTypeDefs.h: 312: UINT8 b44:1;
+[; ;GenericTypeDefs.h: 313: UINT8 b45:1;
+[; ;GenericTypeDefs.h: 314: UINT8 b46:1;
+[; ;GenericTypeDefs.h: 315: UINT8 b47:1;
+[; ;GenericTypeDefs.h: 316: UINT8 b48:1;
+[; ;GenericTypeDefs.h: 317: UINT8 b49:1;
+[; ;GenericTypeDefs.h: 318: UINT8 b50:1;
+[; ;GenericTypeDefs.h: 319: UINT8 b51:1;
+[; ;GenericTypeDefs.h: 320: UINT8 b52:1;
+[; ;GenericTypeDefs.h: 321: UINT8 b53:1;
+[; ;GenericTypeDefs.h: 322: UINT8 b54:1;
+[; ;GenericTypeDefs.h: 323: UINT8 b55:1;
+[; ;GenericTypeDefs.h: 324: UINT8 b56:1;
+[; ;GenericTypeDefs.h: 325: UINT8 b57:1;
+[; ;GenericTypeDefs.h: 326: UINT8 b58:1;
+[; ;GenericTypeDefs.h: 327: UINT8 b59:1;
+[; ;GenericTypeDefs.h: 328: UINT8 b60:1;
+[; ;GenericTypeDefs.h: 329: UINT8 b61:1;
+[; ;GenericTypeDefs.h: 330: UINT8 b62:1;
+[; ;GenericTypeDefs.h: 331: UINT8 b63:1;
+[; ;GenericTypeDefs.h: 332: } bits;
+[; ;GenericTypeDefs.h: 333: } UINT64_VAL;
+[; ;GenericTypeDefs.h: 339: typedef void VOID;
+[; ;GenericTypeDefs.h: 341: typedef char CHAR8;
+[; ;GenericTypeDefs.h: 342: typedef unsigned char UCHAR8;
+[; ;GenericTypeDefs.h: 344: typedef unsigned char BYTE;
+[; ;GenericTypeDefs.h: 345: typedef unsigned short int WORD;
+[; ;GenericTypeDefs.h: 346: typedef unsigned long DWORD;
+[; ;GenericTypeDefs.h: 349: typedef unsigned long long QWORD;
+[; ;GenericTypeDefs.h: 350: typedef signed char CHAR;
+[; ;GenericTypeDefs.h: 351: typedef signed short int SHORT;
+[; ;GenericTypeDefs.h: 352: typedef signed long LONG;
+[; ;GenericTypeDefs.h: 355: typedef signed long long LONGLONG;
+[; ;GenericTypeDefs.h: 356: typedef union
+[; ;GenericTypeDefs.h: 357: {
+[; ;GenericTypeDefs.h: 358: BYTE Val;
+[; ;GenericTypeDefs.h: 359: struct 
+[; ;GenericTypeDefs.h: 360: {
+[; ;GenericTypeDefs.h: 361: BYTE b0:1;
+[; ;GenericTypeDefs.h: 362: BYTE b1:1;
+[; ;GenericTypeDefs.h: 363: BYTE b2:1;
+[; ;GenericTypeDefs.h: 364: BYTE b3:1;
+[; ;GenericTypeDefs.h: 365: BYTE b4:1;
+[; ;GenericTypeDefs.h: 366: BYTE b5:1;
+[; ;GenericTypeDefs.h: 367: BYTE b6:1;
+[; ;GenericTypeDefs.h: 368: BYTE b7:1;
+[; ;GenericTypeDefs.h: 369: } bits;
+[; ;GenericTypeDefs.h: 370: } BYTE_VAL, BYTE_BITS;
+[; ;GenericTypeDefs.h: 372: typedef union
+[; ;GenericTypeDefs.h: 373: {
+[; ;GenericTypeDefs.h: 374: WORD Val;
+[; ;GenericTypeDefs.h: 375: BYTE v[2] ;
+[; ;GenericTypeDefs.h: 376: struct 
+[; ;GenericTypeDefs.h: 377: {
+[; ;GenericTypeDefs.h: 378: BYTE LB;
+[; ;GenericTypeDefs.h: 379: BYTE HB;
+[; ;GenericTypeDefs.h: 380: } byte;
+[; ;GenericTypeDefs.h: 381: struct 
+[; ;GenericTypeDefs.h: 382: {
+[; ;GenericTypeDefs.h: 383: BYTE b0:1;
+[; ;GenericTypeDefs.h: 384: BYTE b1:1;
+[; ;GenericTypeDefs.h: 385: BYTE b2:1;
+[; ;GenericTypeDefs.h: 386: BYTE b3:1;
+[; ;GenericTypeDefs.h: 387: BYTE b4:1;
+[; ;GenericTypeDefs.h: 388: BYTE b5:1;
+[; ;GenericTypeDefs.h: 389: BYTE b6:1;
+[; ;GenericTypeDefs.h: 390: BYTE b7:1;
+[; ;GenericTypeDefs.h: 391: BYTE b8:1;
+[; ;GenericTypeDefs.h: 392: BYTE b9:1;
+[; ;GenericTypeDefs.h: 393: BYTE b10:1;
+[; ;GenericTypeDefs.h: 394: BYTE b11:1;
+[; ;GenericTypeDefs.h: 395: BYTE b12:1;
+[; ;GenericTypeDefs.h: 396: BYTE b13:1;
+[; ;GenericTypeDefs.h: 397: BYTE b14:1;
+[; ;GenericTypeDefs.h: 398: BYTE b15:1;
+[; ;GenericTypeDefs.h: 399: } bits;
+[; ;GenericTypeDefs.h: 400: } WORD_VAL, WORD_BITS;
+[; ;GenericTypeDefs.h: 402: typedef union
+[; ;GenericTypeDefs.h: 403: {
+[; ;GenericTypeDefs.h: 404: DWORD Val;
+[; ;GenericTypeDefs.h: 405: WORD w[2] ;
+[; ;GenericTypeDefs.h: 406: BYTE v[4] ;
+[; ;GenericTypeDefs.h: 407: struct 
+[; ;GenericTypeDefs.h: 408: {
+[; ;GenericTypeDefs.h: 409: WORD LW;
+[; ;GenericTypeDefs.h: 410: WORD HW;
+[; ;GenericTypeDefs.h: 411: } word;
+[; ;GenericTypeDefs.h: 412: struct 
+[; ;GenericTypeDefs.h: 413: {
+[; ;GenericTypeDefs.h: 414: BYTE LB;
+[; ;GenericTypeDefs.h: 415: BYTE HB;
+[; ;GenericTypeDefs.h: 416: BYTE UB;
+[; ;GenericTypeDefs.h: 417: BYTE MB;
+[; ;GenericTypeDefs.h: 418: } byte;
+[; ;GenericTypeDefs.h: 419: struct 
+[; ;GenericTypeDefs.h: 420: {
+[; ;GenericTypeDefs.h: 421: WORD_VAL low;
+[; ;GenericTypeDefs.h: 422: WORD_VAL high;
+[; ;GenericTypeDefs.h: 423: }wordUnion;
+[; ;GenericTypeDefs.h: 424: struct 
+[; ;GenericTypeDefs.h: 425: {
+[; ;GenericTypeDefs.h: 426: BYTE b0:1;
+[; ;GenericTypeDefs.h: 427: BYTE b1:1;
+[; ;GenericTypeDefs.h: 428: BYTE b2:1;
+[; ;GenericTypeDefs.h: 429: BYTE b3:1;
+[; ;GenericTypeDefs.h: 430: BYTE b4:1;
+[; ;GenericTypeDefs.h: 431: BYTE b5:1;
+[; ;GenericTypeDefs.h: 432: BYTE b6:1;
+[; ;GenericTypeDefs.h: 433: BYTE b7:1;
+[; ;GenericTypeDefs.h: 434: BYTE b8:1;
+[; ;GenericTypeDefs.h: 435: BYTE b9:1;
+[; ;GenericTypeDefs.h: 436: BYTE b10:1;
+[; ;GenericTypeDefs.h: 437: BYTE b11:1;
+[; ;GenericTypeDefs.h: 438: BYTE b12:1;
+[; ;GenericTypeDefs.h: 439: BYTE b13:1;
+[; ;GenericTypeDefs.h: 440: BYTE b14:1;
+[; ;GenericTypeDefs.h: 441: BYTE b15:1;
+[; ;GenericTypeDefs.h: 442: BYTE b16:1;
+[; ;GenericTypeDefs.h: 443: BYTE b17:1;
+[; ;GenericTypeDefs.h: 444: BYTE b18:1;
+[; ;GenericTypeDefs.h: 445: BYTE b19:1;
+[; ;GenericTypeDefs.h: 446: BYTE b20:1;
+[; ;GenericTypeDefs.h: 447: BYTE b21:1;
+[; ;GenericTypeDefs.h: 448: BYTE b22:1;
+[; ;GenericTypeDefs.h: 449: BYTE b23:1;
+[; ;GenericTypeDefs.h: 450: BYTE b24:1;
+[; ;GenericTypeDefs.h: 451: BYTE b25:1;
+[; ;GenericTypeDefs.h: 452: BYTE b26:1;
+[; ;GenericTypeDefs.h: 453: BYTE b27:1;
+[; ;GenericTypeDefs.h: 454: BYTE b28:1;
+[; ;GenericTypeDefs.h: 455: BYTE b29:1;
+[; ;GenericTypeDefs.h: 456: BYTE b30:1;
+[; ;GenericTypeDefs.h: 457: BYTE b31:1;
+[; ;GenericTypeDefs.h: 458: } bits;
+[; ;GenericTypeDefs.h: 459: } DWORD_VAL;
+[; ;GenericTypeDefs.h: 462: typedef union
+[; ;GenericTypeDefs.h: 463: {
+[; ;GenericTypeDefs.h: 464: QWORD Val;
+[; ;GenericTypeDefs.h: 465: DWORD d[2] ;
+[; ;GenericTypeDefs.h: 466: WORD w[4] ;
+[; ;GenericTypeDefs.h: 467: BYTE v[8] ;
+[; ;GenericTypeDefs.h: 468: struct 
+[; ;GenericTypeDefs.h: 469: {
+[; ;GenericTypeDefs.h: 470: DWORD LD;
+[; ;GenericTypeDefs.h: 471: DWORD HD;
+[; ;GenericTypeDefs.h: 472: } dword;
+[; ;GenericTypeDefs.h: 473: struct 
+[; ;GenericTypeDefs.h: 474: {
+[; ;GenericTypeDefs.h: 475: WORD LW;
+[; ;GenericTypeDefs.h: 476: WORD HW;
+[; ;GenericTypeDefs.h: 477: WORD UW;
+[; ;GenericTypeDefs.h: 478: WORD MW;
+[; ;GenericTypeDefs.h: 479: } word;
+[; ;GenericTypeDefs.h: 480: struct 
+[; ;GenericTypeDefs.h: 481: {
+[; ;GenericTypeDefs.h: 482: BYTE b0:1;
+[; ;GenericTypeDefs.h: 483: BYTE b1:1;
+[; ;GenericTypeDefs.h: 484: BYTE b2:1;
+[; ;GenericTypeDefs.h: 485: BYTE b3:1;
+[; ;GenericTypeDefs.h: 486: BYTE b4:1;
+[; ;GenericTypeDefs.h: 487: BYTE b5:1;
+[; ;GenericTypeDefs.h: 488: BYTE b6:1;
+[; ;GenericTypeDefs.h: 489: BYTE b7:1;
+[; ;GenericTypeDefs.h: 490: BYTE b8:1;
+[; ;GenericTypeDefs.h: 491: BYTE b9:1;
+[; ;GenericTypeDefs.h: 492: BYTE b10:1;
+[; ;GenericTypeDefs.h: 493: BYTE b11:1;
+[; ;GenericTypeDefs.h: 494: BYTE b12:1;
+[; ;GenericTypeDefs.h: 495: BYTE b13:1;
+[; ;GenericTypeDefs.h: 496: BYTE b14:1;
+[; ;GenericTypeDefs.h: 497: BYTE b15:1;
+[; ;GenericTypeDefs.h: 498: BYTE b16:1;
+[; ;GenericTypeDefs.h: 499: BYTE b17:1;
+[; ;GenericTypeDefs.h: 500: BYTE b18:1;
+[; ;GenericTypeDefs.h: 501: BYTE b19:1;
+[; ;GenericTypeDefs.h: 502: BYTE b20:1;
+[; ;GenericTypeDefs.h: 503: BYTE b21:1;
+[; ;GenericTypeDefs.h: 504: BYTE b22:1;
+[; ;GenericTypeDefs.h: 505: BYTE b23:1;
+[; ;GenericTypeDefs.h: 506: BYTE b24:1;
+[; ;GenericTypeDefs.h: 507: BYTE b25:1;
+[; ;GenericTypeDefs.h: 508: BYTE b26:1;
+[; ;GenericTypeDefs.h: 509: BYTE b27:1;
+[; ;GenericTypeDefs.h: 510: BYTE b28:1;
+[; ;GenericTypeDefs.h: 511: BYTE b29:1;
+[; ;GenericTypeDefs.h: 512: BYTE b30:1;
+[; ;GenericTypeDefs.h: 513: BYTE b31:1;
+[; ;GenericTypeDefs.h: 514: BYTE b32:1;
+[; ;GenericTypeDefs.h: 515: BYTE b33:1;
+[; ;GenericTypeDefs.h: 516: BYTE b34:1;
+[; ;GenericTypeDefs.h: 517: BYTE b35:1;
+[; ;GenericTypeDefs.h: 518: BYTE b36:1;
+[; ;GenericTypeDefs.h: 519: BYTE b37:1;
+[; ;GenericTypeDefs.h: 520: BYTE b38:1;
+[; ;GenericTypeDefs.h: 521: BYTE b39:1;
+[; ;GenericTypeDefs.h: 522: BYTE b40:1;
+[; ;GenericTypeDefs.h: 523: BYTE b41:1;
+[; ;GenericTypeDefs.h: 524: BYTE b42:1;
+[; ;GenericTypeDefs.h: 525: BYTE b43:1;
+[; ;GenericTypeDefs.h: 526: BYTE b44:1;
+[; ;GenericTypeDefs.h: 527: BYTE b45:1;
+[; ;GenericTypeDefs.h: 528: BYTE b46:1;
+[; ;GenericTypeDefs.h: 529: BYTE b47:1;
+[; ;GenericTypeDefs.h: 530: BYTE b48:1;
+[; ;GenericTypeDefs.h: 531: BYTE b49:1;
+[; ;GenericTypeDefs.h: 532: BYTE b50:1;
+[; ;GenericTypeDefs.h: 533: BYTE b51:1;
+[; ;GenericTypeDefs.h: 534: BYTE b52:1;
+[; ;GenericTypeDefs.h: 535: BYTE b53:1;
+[; ;GenericTypeDefs.h: 536: BYTE b54:1;
+[; ;GenericTypeDefs.h: 537: BYTE b55:1;
+[; ;GenericTypeDefs.h: 538: BYTE b56:1;
+[; ;GenericTypeDefs.h: 539: BYTE b57:1;
+[; ;GenericTypeDefs.h: 540: BYTE b58:1;
+[; ;GenericTypeDefs.h: 541: BYTE b59:1;
+[; ;GenericTypeDefs.h: 542: BYTE b60:1;
+[; ;GenericTypeDefs.h: 543: BYTE b61:1;
+[; ;GenericTypeDefs.h: 544: BYTE b62:1;
+[; ;GenericTypeDefs.h: 545: BYTE b63:1;
+[; ;GenericTypeDefs.h: 546: } bits;
+[; ;GenericTypeDefs.h: 547: } QWORD_VAL;
+[; ;delay.h: 17: extern void delay_1us(void);
+[; ;delay.h: 19: extern void delay_ms(WORD count);
+[; ;interrupt.h: 12: extern void init_interrupt(void);
+[; ;interrupt.h: 16: extern unsigned char open_discharge_time;
+[; ;interrupt.h: 17: extern unsigned int ms_cnt;
+[; ;interrupt.h: 18: extern unsigned int se_cnt;
+[; ;interrupt.h: 19: extern unsigned int mi_cnt;
+[; ;interrupt.h: 20: extern unsigned int ho_cnt;
+[; ;interrupt.h: 22: extern unsigned char open_an0_time;
+[; ;interrupt.h: 23: extern unsigned int an0_time_count;
+[; ;interrupt.h: 24: extern unsigned char handle_an0_process_flag;
+[; ;interrupt.h: 27: extern unsigned char open_an1_time;
+[; ;interrupt.h: 28: extern unsigned int an1_time_count;
+[; ;interrupt.h: 29: extern unsigned char handle_an1_process_flag;
+[; ;interrupt.h: 32: extern unsigned char open_an2_time;
+[; ;interrupt.h: 33: extern unsigned int an2_time_count;
+[; ;interrupt.h: 34: extern unsigned char handle_an2_process_flag;
+[; ;interrupt.h: 37: extern unsigned char open_an3_time;
+[; ;interrupt.h: 38: extern unsigned int an3_time_count;
+[; ;interrupt.h: 39: extern unsigned char handle_an3_process_flag;
+[; ;interrupt.h: 42: extern unsigned char open_an4_time;
+[; ;interrupt.h: 43: extern unsigned int an4_time_count;
+[; ;interrupt.h: 44: extern unsigned char handle_an4_process_flag;
+[; ;interrupt.h: 47: extern unsigned char open_an9_time;
+[; ;interrupt.h: 48: extern unsigned int an9_time_count;
+[; ;interrupt.h: 49: extern unsigned char handle_an9_process_flag;
+[; ;interrupt.h: 52: extern unsigned char open_an10_time;
+[; ;interrupt.h: 53: extern unsigned int an10_time_count;
+[; ;interrupt.h: 54: extern unsigned char handle_an10_process_flag;
+[; ;interrupt.h: 57: extern unsigned char handle_short_flag;
+[; ;led.h: 43: extern void init_led(void);
+[; ;timer.h: 15: extern void init_timer1(void);
+[; ;uart.h: 24: extern void init_uart1(void);
+[; ;uart.h: 26: extern void uart1_send_byte(BYTE data);
+[; ;uart.h: 28: extern void uart1_send_nbyte(BYTE *data,DWORD size);
+[; ;uart.h: 30: extern BYTE uart1_read_byte(void);
+[; ;uart.h: 32: extern void uart1_read_nbyte(BYTE *buffer,BYTE length);
+[; ;uart.h: 34: extern bit handle_even_check(unsigned char databyte);
+[; ;uart.h: 36: extern void handle_uart_rx_buf(void);
+[; ;uart.h: 44: extern unsigned char uart1_rx_buf[80];
+[; ;uart.h: 46: extern unsigned char uart1_tx_buf[80];
+[; ;uart.h: 51: extern unsigned char uart1_time_count;
+[; ;uart.h: 53: extern unsigned char uart1_receive_byte_count;
+[; ;uart.h: 55: extern BOOL uart1_receive_flag;
+[; ;uart.h: 57: extern unsigned char uart1_rx_control_flag;
+[; ;uart.h: 60: extern unsigned char uart_send_delay_timer;
+[; ;uart.h: 61: extern unsigned char uart_send_end_flag;
+[; ;uart.h: 62: extern unsigned char uart_send_byte_count;
+[; ;uart.h: 63: extern unsigned char*uart_send_point;
+[; ;uart.h: 65: extern unsigned char rx_frame_kind;
+[; ;uart.h: 66: extern unsigned char tx_frame_kind;
+[; ;adc.h: 57: extern unsigned int mcu_value;
+[; ;adc.h: 59: extern unsigned int temperature_value;
+[; ;adc.h: 61: extern unsigned int pv_voltage_value;
+[; ;adc.h: 63: extern unsigned int battery_voltage_value;
+[; ;adc.h: 65: extern unsigned int load_voltage_value;
+[; ;adc.h: 67: extern unsigned int charge_current_value;
+[; ;adc.h: 69: extern unsigned int discharge_current_value;
+[; ;adc.h: 72: extern unsigned int adc_buffer[64];
+[; ;adc.h: 79: extern void init_adc(void);
+[; ;pwm.h: 29: extern unsigned int pwm_duty_value;
+[; ;pwm.h: 31: extern unsigned int bost_pwm_value;
+[; ;pwm.h: 33: extern unsigned int buck_pwm_value;
+[; ;pwm.h: 36: extern long int P_prev;
+[; ;pwm.h: 38: extern long int P_last;
+[; ;pwm.h: 44: extern void init_pwm(void);
+[; ;pwm.h: 46: extern void Enable_Buck_Pwm(void);
+[; ;pwm.h: 48: extern void Disable_Buck_Pwm(void);
+[; ;pwm.h: 50: extern void Set_Buck_Pwm_Duty(unsigned int duty);
+[; ;pwm.h: 52: extern void Enable_Bost_Pwm(void);
+[; ;pwm.h: 54: extern void Disable_Bost_Pwm(void);
+[; ;pwm.h: 56: extern void Set_Bost_Pwm_Duty(unsigned int dduty);
+[; ;task.h: 37: extern unsigned char buf[50];
+[; ;task.h: 39: extern unsigned char system_status;
+[; ;task.h: 41: extern unsigned char system_check_time;
+[; ;task.h: 43: extern unsigned int system_time_count;
+[; ;task.h: 45: extern unsigned char work_mode;
+[; ;task.h: 47: extern unsigned char pv_voltage_status;
+[; ;task.h: 49: extern unsigned char battery_voltage_status;
+[; ;task.h: 51: extern unsigned char load_voltage_status;
+[; ;task.h: 53: extern unsigned char discharge_index;
+[; ;task.h: 55: extern unsigned char charge_index;
+[; ;task.h: 57: extern unsigned char nop_index;
+[; ;task.h: 59: extern unsigned int involid_time_count;
+[; ;task.h: 61: extern unsigned int cv_level_time_count;
+[; ;task.h: 63: extern unsigned int load_short_time_count;
+[; ;task.h: 65: extern unsigned int load_open_time_count;
+[; ;task.h: 67: extern unsigned int over_load_time_count;
+[; ;task.h: 69: extern unsigned int battery_low_time_count;
+[; ;task.h: 74: extern unsigned long int night_time_count;
+[; ;task.h: 76: extern unsigned long int day_time_count;
+[; ;task.h: 78: extern unsigned long int pv_time_count;
+[; ;task.h: 80: extern unsigned long int light_time_level;
+[; ;task.h: 82: extern unsigned int pv_prev;
+[; ;task.h: 84: extern unsigned int I_prev;
+[; ;task.h: 87: extern float PWM;
+[; ;task.h: 89: extern float PWM_I;
+[; ;task.h: 91: extern float bt_prev;
+[; ;task.h: 93: extern unsigned char mppt_status;
+[; ;task.h: 95: extern unsigned int mppt_time_count;
+[; ;task.h: 97: extern unsigned char temper_time_count;
+[; ;task.h: 99: extern unsigned char over_temper_time_count;
+[; ;task.h: 101: extern unsigned char sys_temper_flag;
+[; ;task.h: 105: extern unsigned char charge_led_status;
+[; ;task.h: 107: extern unsigned char bt_led_status;
+[; ;task.h: 109: extern unsigned char discharge_led_status;
+[; ;task.h: 111: extern unsigned char bt_time_count;
+[; ;task.h: 113: extern unsigned char pv_index;
+[; ;task.h: 115: extern unsigned char Adjust_Pout_Flag;
+[; ;task.h: 117: extern unsigned char limit_power_pid_flag;
+[; ;task.h: 121: extern unsigned char mcu_t00_time_count;
+[; ;task.h: 122: extern unsigned char mcu_t01_time_count;
+[; ;task.h: 123: extern unsigned char mcu_t02_time_count;
+[; ;task.h: 124: extern unsigned char mcu_t03_time_count;
+[; ;task.h: 125: extern unsigned char mcu_temp_index;
+[; ;task.h: 127: extern unsigned char pid_index;
+[; ;task.h: 131: extern void handle_ad_loop(void);
+[; ;task.h: 133: extern void handle_task_process(void);
+[; ;task.h: 135: extern unsigned int start_ad_convert(unsigned char ch);
+[; ;task.h: 137: extern void Mppt_Charge(void);
+[; ;task.h: 139: extern void CC_CV_Charge(void);
+[; ;PID.h: 14: typedef struct PID_VAR{
+[; ;PID.h: 16: float SetPoint;
+[; ;PID.h: 17: float Proportion;
+[; ;PID.h: 18: float Integral;
+[; ;PID.h: 19: float Derivative;
+[; ;PID.h: 20: float LastError;
+[; ;PID.h: 21: float PrevError;
+[; ;PID.h: 22: float SumError;
+[; ;PID.h: 23: } PID;
+[; ;PID.h: 28: extern PID PID_CC_charge;
+[; ;PID.h: 30: extern PID PID_CV_charge;
+[; ;PID.h: 32: extern PID PID_CC_discharge;
+[; ;PID.h: 34: extern void pid_init (PID *pp);
+[; ;PID.h: 36: extern float pid_calc( PID *pp, int NowPoint );
+[; ;Modbus.h: 21: extern unsigned int crc_data;
+[; ;Modbus.h: 26: extern unsigned int crc16(volatile unsigned char *puchMsg, unsigned char usDataLen);
+[; ;ird_remote.h: 6: extern float charge_r_value;
+[; ;ird_remote.h: 8: extern float discharge_r_value;
+[; ;ird_remote.h: 11: extern float p_v;
+[; ;ird_remote.h: 13: extern float b_v;
+[; ;ird_remote.h: 15: extern float load_v;
+[; ;ird_remote.h: 17: extern float charge_I ;
+[; ;ird_remote.h: 19: extern float load_I ;
+[; ;ird_remote.h: 21: extern unsigned char sys_mode;
+[; ;ird_remote.h: 23: extern unsigned char today_index;
+[; ;ird_remote.h: 25: extern float bt_00_hv;
+[; ;ird_remote.h: 26: extern float bt_00_lv;
+[; ;ird_remote.h: 28: extern float bt_01_hv;
+[; ;ird_remote.h: 29: extern float bt_01_lv;
+[; ;ird_remote.h: 31: extern float bt_02_hv;
+[; ;ird_remote.h: 32: extern float bt_02_lv;
+[; ;ird_remote.h: 34: extern float bt_03_hv;
+[; ;ird_remote.h: 35: extern float bt_03_lv;
+[; ;ird_remote.h: 37: extern float bt_04_hv;
+[; ;ird_remote.h: 38: extern float bt_04_lv;
+[; ;ird_remote.h: 40: extern float bt_05_hv;
+[; ;ird_remote.h: 41: extern float bt_05_lv;
+[; ;ird_remote.h: 43: extern float bt_06_hv;
+[; ;ird_remote.h: 44: extern float bt_06_lv;
+[; ;ird_remote.h: 46: extern float bt_07_hv;
+[; ;ird_remote.h: 47: extern float bt_07_lv;
+[; ;ird_remote.h: 51: extern float light_pv;
+[; ;ird_remote.h: 53: extern float load_cc_I;
+[; ;ird_remote.h: 55: extern float load_percent;
+[; ;ird_remote.h: 57: extern float step_01_load_percent;
+[; ;ird_remote.h: 59: extern float step_02_load_percent;
+[; ;ird_remote.h: 61: extern float step_03_load_percent;
+[; ;ird_remote.h: 63: extern float step_04_load_percent;
+[; ;ird_remote.h: 65: extern float step_05_load_percent;
+[; ;ird_remote.h: 67: extern unsigned int step_01_time_limit;
+[; ;ird_remote.h: 69: extern unsigned int step_02_time_limit;
+[; ;ird_remote.h: 71: extern unsigned int step_03_time_limit;
+[; ;ird_remote.h: 73: extern unsigned int step_04_time_limit;
+[; ;ird_remote.h: 75: extern unsigned int step_05_time_limit;
+[; ;ird_remote.h: 77: extern unsigned char volt_id;
+[; ;ird_remote.h: 79: extern unsigned char bt_id;
+[; ;ird_remote.h: 81: extern unsigned int light_time;
+[; ;ird_remote.h: 83: extern float bt_volt_100 ;
+[; ;ird_remote.h: 85: extern float bt_volt_80 ;
+[; ;ird_remote.h: 87: extern float bt_volt_60 ;
+[; ;ird_remote.h: 89: extern float bt_volt_40 ;
+[; ;ird_remote.h: 91: extern float bt_volt_20 ;
+[; ;ird_remote.h: 93: extern float bt_volt_00 ;
+[; ;ird_remote.h: 96: extern float dianchi_guoya_baohu;
+[; ;ird_remote.h: 98: extern float dianchi_guoya_huifu;
+[; ;ird_remote.h: 100: extern float dianchi_qianya_baohu;
+[; ;ird_remote.h: 102: extern float dianchi_qianya_huifu;
+[; ;ird_remote.h: 104: extern float dianchi_diya_level;
+[; ;ird_remote.h: 106: extern float dianchi_cv_level;
+[; ;ird_remote.h: 108: extern float charge_i_limit;
+[; ;ird_remote.h: 110: extern float shuchu_shortout_voltage;
+[; ;ird_remote.h: 112: extern float shuchu_open_voltage;
+[; ;ird_remote.h: 114: extern float discharge_i_baohu;
+[; ;ird_remote.h: 116: extern float discharge_i_limit;
+[; ;ird_remote.h: 118: extern float light_on_pv_level;
+[; ;ird_remote.h: 120: extern float light_off_pv_level;
+[; ;ird_remote.h: 123: float Load_Pmax;
+[; ;ird_remote.h: 132: extern void auto_system(void);
+[; ;ird_remote.h: 134: extern void read_param_eeprom(void);
+"7 D:\MCUProject\ZH-TYNB-V1.0\src\Modbus.c
+[i _crc_data
+-> -> 0 `i `ui
+]
+[; ;Modbus.c: 7: unsigned int crc_data=0x00;
+"10
+[i _CRCHi
+:U ..
+"12
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"13
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+"14
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"15
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+"16
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+"17
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+"18
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+"19
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+"20
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"21
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+"22
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+"23
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+"24
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"25
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+"26
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"27
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+"28
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"29
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+"30
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"31
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+"32
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"33
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+"34
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+"35
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+"36
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 1 `i `uc
+-> -> 192 `i `uc
+"37
+-> -> 128 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 193 `i `uc
+-> -> 129 `i `uc
+-> -> 64 `i `uc
+..
+]
+[; ;Modbus.c: 10: const unsigned char CRCHi[] =
+[; ;Modbus.c: 11: {
+[; ;Modbus.c: 12: 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+[; ;Modbus.c: 13: 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+[; ;Modbus.c: 14: 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+[; ;Modbus.c: 15: 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+[; ;Modbus.c: 16: 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+[; ;Modbus.c: 17: 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41,
+[; ;Modbus.c: 18: 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+[; ;Modbus.c: 19: 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+[; ;Modbus.c: 20: 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+[; ;Modbus.c: 21: 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+[; ;Modbus.c: 22: 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+[; ;Modbus.c: 23: 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+[; ;Modbus.c: 24: 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+[; ;Modbus.c: 25: 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+[; ;Modbus.c: 26: 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+[; ;Modbus.c: 27: 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+[; ;Modbus.c: 28: 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+[; ;Modbus.c: 29: 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+[; ;Modbus.c: 30: 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+[; ;Modbus.c: 31: 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+[; ;Modbus.c: 32: 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0,
+[; ;Modbus.c: 33: 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40,
+[; ;Modbus.c: 34: 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1,
+[; ;Modbus.c: 35: 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41,
+[; ;Modbus.c: 36: 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0,
+[; ;Modbus.c: 37: 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40,
+[; ;Modbus.c: 38: };
+"40
+[i _CRCLo
+:U ..
+"42
+-> -> 0 `i `uc
+-> -> 192 `i `uc
+-> -> 193 `i `uc
+-> -> 1 `i `uc
+-> -> 195 `i `uc
+-> -> 3 `i `uc
+-> -> 2 `i `uc
+-> -> 194 `i `uc
+-> -> 198 `i `uc
+-> -> 6 `i `uc
+"43
+-> -> 7 `i `uc
+-> -> 199 `i `uc
+-> -> 5 `i `uc
+-> -> 197 `i `uc
+-> -> 196 `i `uc
+-> -> 4 `i `uc
+-> -> 204 `i `uc
+-> -> 12 `i `uc
+-> -> 13 `i `uc
+-> -> 205 `i `uc
+"44
+-> -> 15 `i `uc
+-> -> 207 `i `uc
+-> -> 206 `i `uc
+-> -> 14 `i `uc
+-> -> 10 `i `uc
+-> -> 202 `i `uc
+-> -> 203 `i `uc
+-> -> 11 `i `uc
+-> -> 201 `i `uc
+-> -> 9 `i `uc
+"45
+-> -> 8 `i `uc
+-> -> 200 `i `uc
+-> -> 216 `i `uc
+-> -> 24 `i `uc
+-> -> 25 `i `uc
+-> -> 217 `i `uc
+-> -> 27 `i `uc
+-> -> 219 `i `uc
+-> -> 218 `i `uc
+-> -> 26 `i `uc
+"46
+-> -> 30 `i `uc
+-> -> 222 `i `uc
+-> -> 223 `i `uc
+-> -> 31 `i `uc
+-> -> 221 `i `uc
+-> -> 29 `i `uc
+-> -> 28 `i `uc
+-> -> 220 `i `uc
+-> -> 20 `i `uc
+-> -> 212 `i `uc
+"47
+-> -> 213 `i `uc
+-> -> 21 `i `uc
+-> -> 215 `i `uc
+-> -> 23 `i `uc
+-> -> 22 `i `uc
+-> -> 214 `i `uc
+-> -> 210 `i `uc
+-> -> 18 `i `uc
+-> -> 19 `i `uc
+-> -> 211 `i `uc
+"48
+-> -> 17 `i `uc
+-> -> 209 `i `uc
+-> -> 208 `i `uc
+-> -> 16 `i `uc
+-> -> 240 `i `uc
+-> -> 48 `i `uc
+-> -> 49 `i `uc
+-> -> 241 `i `uc
+-> -> 51 `i `uc
+-> -> 243 `i `uc
+"49
+-> -> 242 `i `uc
+-> -> 50 `i `uc
+-> -> 54 `i `uc
+-> -> 246 `i `uc
+-> -> 247 `i `uc
+-> -> 55 `i `uc
+-> -> 245 `i `uc
+-> -> 53 `i `uc
+-> -> 52 `i `uc
+-> -> 244 `i `uc
+"50
+-> -> 60 `i `uc
+-> -> 252 `i `uc
+-> -> 253 `i `uc
+-> -> 61 `i `uc
+-> -> 255 `i `uc
+-> -> 63 `i `uc
+-> -> 62 `i `uc
+-> -> 254 `i `uc
+-> -> 250 `i `uc
+-> -> 58 `i `uc
+"51
+-> -> 59 `i `uc
+-> -> 251 `i `uc
+-> -> 57 `i `uc
+-> -> 249 `i `uc
+-> -> 248 `i `uc
+-> -> 56 `i `uc
+-> -> 40 `i `uc
+-> -> 232 `i `uc
+-> -> 233 `i `uc
+-> -> 41 `i `uc
+"52
+-> -> 235 `i `uc
+-> -> 43 `i `uc
+-> -> 42 `i `uc
+-> -> 234 `i `uc
+-> -> 238 `i `uc
+-> -> 46 `i `uc
+-> -> 47 `i `uc
+-> -> 239 `i `uc
+-> -> 45 `i `uc
+-> -> 237 `i `uc
+"53
+-> -> 236 `i `uc
+-> -> 44 `i `uc
+-> -> 228 `i `uc
+-> -> 36 `i `uc
+-> -> 37 `i `uc
+-> -> 229 `i `uc
+-> -> 39 `i `uc
+-> -> 231 `i `uc
+-> -> 230 `i `uc
+-> -> 38 `i `uc
+"54
+-> -> 34 `i `uc
+-> -> 226 `i `uc
+-> -> 227 `i `uc
+-> -> 35 `i `uc
+-> -> 225 `i `uc
+-> -> 33 `i `uc
+-> -> 32 `i `uc
+-> -> 224 `i `uc
+-> -> 160 `i `uc
+-> -> 96 `i `uc
+"55
+-> -> 97 `i `uc
+-> -> 161 `i `uc
+-> -> 99 `i `uc
+-> -> 163 `i `uc
+-> -> 162 `i `uc
+-> -> 98 `i `uc
+-> -> 102 `i `uc
+-> -> 166 `i `uc
+-> -> 167 `i `uc
+-> -> 103 `i `uc
+"56
+-> -> 165 `i `uc
+-> -> 101 `i `uc
+-> -> 100 `i `uc
+-> -> 164 `i `uc
+-> -> 108 `i `uc
+-> -> 172 `i `uc
+-> -> 173 `i `uc
+-> -> 109 `i `uc
+-> -> 175 `i `uc
+-> -> 111 `i `uc
+"57
+-> -> 110 `i `uc
+-> -> 174 `i `uc
+-> -> 170 `i `uc
+-> -> 106 `i `uc
+-> -> 107 `i `uc
+-> -> 171 `i `uc
+-> -> 105 `i `uc
+-> -> 169 `i `uc
+-> -> 168 `i `uc
+-> -> 104 `i `uc
+"58
+-> -> 120 `i `uc
+-> -> 184 `i `uc
+-> -> 185 `i `uc
+-> -> 121 `i `uc
+-> -> 187 `i `uc
+-> -> 123 `i `uc
+-> -> 122 `i `uc
+-> -> 186 `i `uc
+-> -> 190 `i `uc
+-> -> 126 `i `uc
+"59
+-> -> 127 `i `uc
+-> -> 191 `i `uc
+-> -> 125 `i `uc
+-> -> 189 `i `uc
+-> -> 188 `i `uc
+-> -> 124 `i `uc
+-> -> 180 `i `uc
+-> -> 116 `i `uc
+-> -> 117 `i `uc
+-> -> 181 `i `uc
+"60
+-> -> 119 `i `uc
+-> -> 183 `i `uc
+-> -> 182 `i `uc
+-> -> 118 `i `uc
+-> -> 114 `i `uc
+-> -> 178 `i `uc
+-> -> 179 `i `uc
+-> -> 115 `i `uc
+-> -> 177 `i `uc
+-> -> 113 `i `uc
+"61
+-> -> 112 `i `uc
+-> -> 176 `i `uc
+-> -> 80 `i `uc
+-> -> 144 `i `uc
+-> -> 145 `i `uc
+-> -> 81 `i `uc
+-> -> 147 `i `uc
+-> -> 83 `i `uc
+-> -> 82 `i `uc
+-> -> 146 `i `uc
+"62
+-> -> 150 `i `uc
+-> -> 86 `i `uc
+-> -> 87 `i `uc
+-> -> 151 `i `uc
+-> -> 85 `i `uc
+-> -> 149 `i `uc
+-> -> 148 `i `uc
+-> -> 84 `i `uc
+-> -> 156 `i `uc
+-> -> 92 `i `uc
+"63
+-> -> 93 `i `uc
+-> -> 157 `i `uc
+-> -> 95 `i `uc
+-> -> 159 `i `uc
+-> -> 158 `i `uc
+-> -> 94 `i `uc
+-> -> 90 `i `uc
+-> -> 154 `i `uc
+-> -> 155 `i `uc
+-> -> 91 `i `uc
+"64
+-> -> 153 `i `uc
+-> -> 89 `i `uc
+-> -> 88 `i `uc
+-> -> 152 `i `uc
+-> -> 136 `i `uc
+-> -> 72 `i `uc
+-> -> 73 `i `uc
+-> -> 137 `i `uc
+-> -> 75 `i `uc
+-> -> 139 `i `uc
+"65
+-> -> 138 `i `uc
+-> -> 74 `i `uc
+-> -> 78 `i `uc
+-> -> 142 `i `uc
+-> -> 143 `i `uc
+-> -> 79 `i `uc
+-> -> 141 `i `uc
+-> -> 77 `i `uc
+-> -> 76 `i `uc
+-> -> 140 `i `uc
+"66
+-> -> 68 `i `uc
+-> -> 132 `i `uc
+-> -> 133 `i `uc
+-> -> 69 `i `uc
+-> -> 135 `i `uc
+-> -> 71 `i `uc
+-> -> 70 `i `uc
+-> -> 134 `i `uc
+-> -> 130 `i `uc
+-> -> 66 `i `uc
+"67
+-> -> 67 `i `uc
+-> -> 131 `i `uc
+-> -> 65 `i `uc
+-> -> 129 `i `uc
+-> -> 128 `i `uc
+-> -> 64 `i `uc
+..
+]
+[; ;Modbus.c: 40: const unsigned char CRCLo[] =
+[; ;Modbus.c: 41: {
+[; ;Modbus.c: 42: 0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06,
+[; ;Modbus.c: 43: 0x07, 0xC7, 0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD,
+[; ;Modbus.c: 44: 0x0F, 0xCF, 0xCE, 0x0E, 0x0A, 0xCA, 0xCB, 0x0B, 0xC9, 0x09,
+[; ;Modbus.c: 45: 0x08, 0xC8, 0xD8, 0x18, 0x19, 0xD9, 0x1B, 0xDB, 0xDA, 0x1A,
+[; ;Modbus.c: 46: 0x1E, 0xDE, 0xDF, 0x1F, 0xDD, 0x1D, 0x1C, 0xDC, 0x14, 0xD4,
+[; ;Modbus.c: 47: 0xD5, 0x15, 0xD7, 0x17, 0x16, 0xD6, 0xD2, 0x12, 0x13, 0xD3,
+[; ;Modbus.c: 48: 0x11, 0xD1, 0xD0, 0x10, 0xF0, 0x30, 0x31, 0xF1, 0x33, 0xF3,
+[; ;Modbus.c: 49: 0xF2, 0x32, 0x36, 0xF6, 0xF7, 0x37, 0xF5, 0x35, 0x34, 0xF4,
+[; ;Modbus.c: 50: 0x3C, 0xFC, 0xFD, 0x3D, 0xFF, 0x3F, 0x3E, 0xFE, 0xFA, 0x3A,
+[; ;Modbus.c: 51: 0x3B, 0xFB, 0x39, 0xF9, 0xF8, 0x38, 0x28, 0xE8, 0xE9, 0x29,
+[; ;Modbus.c: 52: 0xEB, 0x2B, 0x2A, 0xEA, 0xEE, 0x2E, 0x2F, 0xEF, 0x2D, 0xED,
+[; ;Modbus.c: 53: 0xEC, 0x2C, 0xE4, 0x24, 0x25, 0xE5, 0x27, 0xE7, 0xE6, 0x26,
+[; ;Modbus.c: 54: 0x22, 0xE2, 0xE3, 0x23, 0xE1, 0x21, 0x20, 0xE0, 0xA0, 0x60,
+[; ;Modbus.c: 55: 0x61, 0xA1, 0x63, 0xA3, 0xA2, 0x62, 0x66, 0xA6, 0xA7, 0x67,
+[; ;Modbus.c: 56: 0xA5, 0x65, 0x64, 0xA4, 0x6C, 0xAC, 0xAD, 0x6D, 0xAF, 0x6F,
+[; ;Modbus.c: 57: 0x6E, 0xAE, 0xAA, 0x6A, 0x6B, 0xAB, 0x69, 0xA9, 0xA8, 0x68,
+[; ;Modbus.c: 58: 0x78, 0xB8, 0xB9, 0x79, 0xBB, 0x7B, 0x7A, 0xBA, 0xBE, 0x7E,
+[; ;Modbus.c: 59: 0x7F, 0xBF, 0x7D, 0xBD, 0xBC, 0x7C, 0xB4, 0x74, 0x75, 0xB5,
+[; ;Modbus.c: 60: 0x77, 0xB7, 0xB6, 0x76, 0x72, 0xB2, 0xB3, 0x73, 0xB1, 0x71,
+[; ;Modbus.c: 61: 0x70, 0xB0, 0x50, 0x90, 0x91, 0x51, 0x93, 0x53, 0x52, 0x92,
+[; ;Modbus.c: 62: 0x96, 0x56, 0x57, 0x97, 0x55, 0x95, 0x94, 0x54, 0x9C, 0x5C,
+[; ;Modbus.c: 63: 0x5D, 0x9D, 0x5F, 0x9F, 0x9E, 0x5E, 0x5A, 0x9A, 0x9B, 0x5B,
+[; ;Modbus.c: 64: 0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89, 0x4B, 0x8B,
+[; ;Modbus.c: 65: 0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C,
+[; ;Modbus.c: 66: 0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42,
+[; ;Modbus.c: 67: 0x43, 0x83, 0x41, 0x81, 0x80, 0x40,
+[; ;Modbus.c: 68: } ;
+"76
+[v _crc16 `(ui  1 ef2`*Vuc`uc ]
+{
+[; ;Modbus.c: 75: unsigned int crc16(volatile unsigned char *puchMsg, unsigned char usDataLen)
+[; ;Modbus.c: 76: {
+[e :U _crc16 ]
+[v _puchMsg `*Vuc  1 r1 ]
+[v _usDataLen `uc  1 r2 ]
+[f ]
+"77
+[v _uchCRCHi `uc  1 a ]
+[; ;Modbus.c: 77: unsigned char uchCRCHi = 0xFF ;
+[e = _uchCRCHi -> -> 255 `i `uc ]
+"78
+[v _uchCRCLo `uc  1 a ]
+[; ;Modbus.c: 78: unsigned char uchCRCLo = 0xFF ;
+[e = _uchCRCLo -> -> 255 `i `uc ]
+"79
+[v _uIndex `ul  1 a ]
+[; ;Modbus.c: 79: unsigned long uIndex ;
+[; ;Modbus.c: 80: while (usDataLen--)
+"80
+[e $U 31  ]
+[e :U 32 ]
+[; ;Modbus.c: 81: {
+"81
+{
+[; ;Modbus.c: 82: uIndex = uchCRCHi ^ *puchMsg++ ;
+"82
+[e = _uIndex -> -> ^ -> _uchCRCHi `i -> *U ++ _puchMsg * -> -> 1 `i `x -> -> # *U _puchMsg `i `x `i `l `ul ]
+[; ;Modbus.c: 83: uchCRCHi = uchCRCLo ^ CRCHi[uIndex] ;
+"83
+[e = _uchCRCHi -> ^ -> _uchCRCLo `i -> *U + &U _CRCHi * -> _uIndex `ux -> -> # *U &U _CRCHi `ui `ux `i `uc ]
+[; ;Modbus.c: 84: uchCRCLo = CRCLo[uIndex] ;
+"84
+[e = _uchCRCLo *U + &U _CRCLo * -> _uIndex `ux -> -> # *U &U _CRCLo `ui `ux ]
+"85
+}
+[e :U 31 ]
+"80
+[e $ != -> -- _usDataLen -> -> 1 `i `uc `i -> -> -> 0 `i `uc `i 32  ]
+[e :U 33 ]
+[; ;Modbus.c: 85: }
+[; ;Modbus.c: 86: return ( uchCRCHi<< 8 | uchCRCLo);
+"86
+[e ) -> | << -> _uchCRCHi `i -> 8 `i -> _uchCRCLo `i `ui ]
+[e $UE 30  ]
+[; ;Modbus.c: 87: }
+"87
+[e :UE 30 ]
+}
